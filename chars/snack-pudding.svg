@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="body" x1="70" y1="90" x2="70" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4C8"/><stop offset=".5" stop-color="#F5D889"/><stop offset="1" stop-color="#E0B45A"/>
+    </linearGradient>
+    <linearGradient id="car" x1="70" y1="70" x2="70" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E09248"/><stop offset="1" stop-color="#8F4518"/>
+    </linearGradient>
+    <linearGradient id="crm" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff"/><stop offset="1" stop-color="#FFE4CC"/>
+    </linearGradient>
+    <radialGradient id="hi" cx=".35" cy=".3" r=".6">
+      <stop stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="120" cy="215" rx="78" ry="14" fill="#C4A882" opacity=".32"/>
+  <ellipse cx="120" cy="200" rx="70" ry="13" fill="#FFF9F0" stroke="#3A2A22" stroke-width="4"/>
+  <!-- pudding body -->
+  <path d="M52 108c0-6 10-12 22-12h92c12 0 22 6 22 12v52c0 32-26 52-68 52s-68-20-68-52z" fill="url(#body)" stroke="#3A2A22" stroke-width="4.2" stroke-linejoin="round"/>
+  <path d="M52 108c0-6 10-12 22-12h92c12 0 22 6 22 12v52c0 32-26 52-68 52s-68-20-68-52z" fill="url(#hi)"/>
+  <path d="M64 122c14 10 28 6 38-4 12 12 30 12 42 0 10 10 22 12 34 2" stroke="#FFE9A8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+  <!-- caramel top -->
+  <path d="M48 98c4-16 22-28 42-26 14 2 22 12 30 12s16-10 30-12c20-2 38 10 42 26-12-7-28-2-40 8-14 12-28 12-42 0-12-10-28-14-40-8H48z" fill="url(#car)" stroke="#3A2A22" stroke-width="4.2" stroke-linejoin="round"/>
+  <!-- drips -->
+  <path d="M70 108c4 22 0 36-10 50" stroke="#7A3814" stroke-width="7" stroke-linecap="round"/>
+  <path d="M120 104c2 16 0 30-2 42" stroke="#A85A24" stroke-width="5.5" stroke-linecap="round" opacity=".8"/>
+  <path d="M170 106c-2 20 2 34 12 48" stroke="#7A3814" stroke-width="7" stroke-linecap="round"/>
+  <!-- cream -->
+  <path d="M92 72c-5-22 12-36 32-34 14 2 24 16 22 34-12-7-24-7-36 0z" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.6"/>
+  <ellipse cx="100" cy="60" rx="13" ry="12" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.4"/>
+  <ellipse cx="120" cy="50" rx="12" ry="11" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.4"/>
+  <ellipse cx="136" cy="62" rx="12" ry="11" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.4"/>
+  <!-- cherry -->
+  <circle cx="120" cy="44" r="11" fill="#E23D52" stroke="#3A2A22" stroke-width="3.2"/>
+  <circle cx="120" cy="44" r="11" fill="url(#hi)"/>
+  <path d="M120 34c4-10 12-10 12 0" stroke="#4F8A3E" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="108" cy="54" r="3" fill="#fff" opacity=".9"/>
+</svg>
