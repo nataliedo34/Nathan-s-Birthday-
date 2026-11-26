@@ -1,0 +1,70 @@
+id="snacks" class="band room attraction-room room-cafe" data-room="snacks" hidden>
+        <div class="room-sky" aria-hidden="true"></div>
+        <div class="room-ground" aria-hidden="true"></div>
+        <div class="wrap attraction-inner cafe-wrap">
+          <p class="attraction-eyebrow">Birthday Café</p>
+          <div id="cafe-game" class="cafe-game" aria-label="Nate's Birthday Café cooking game">
+            <div class="cafe-hud">
+              <div class="cafe-hud-left">
+                <span class="cafe-pill">Coins <b id="cafe-coins">0</b></span>
+                <span class="cafe-pill">Stars <b id="cafe-stars">0</b></span>
+                <span class="cafe-pill">Served <b id="cafe-served">0</b></span>
+              </div>
+              <button type="button" class="cafe-btn cafe-btn-primary" id="cafe-session-btn">Open café</button>
+            </div>
+
+            <div class="cafe-room">
+              <div class="cafe-counter" id="cafe-counter">
+                <div class="cafe-shelf" aria-hidden="true"></div>
+                <div class="cafe-customer-spot" id="cafe-customer-spot">
+                  <div class="cafe-customer is-empty" id="cafe-customer">
+                    <img id="cafe-customer-img" src="chars/chiikawa.png" alt="">
+                    <span class="cafe-hearts" id="cafe-hearts" aria-hidden="true"></span>
+                  </div>
+                  <div class="cafe-bubble" id="cafe-bubble" hidden>
+                    <p id="cafe-bubble-text"></p>
+                    <div class="cafe-order-preview" id="cafe-order-preview"></div>
+                  </div>
+                </div>
+                <div class="cafe-serve-plate" id="cafe-serve-plate" aria-label="Serving plate">
+                  <div class="cafe-dish" id="cafe-dish"></div>
+                </div>
+              </div>
+
+              <div class="cafe-workspace" id="cafe-workspace">
+                <div class="cafe-idle" id="cafe-idle">
+                  <p class="cafe-idle-title">Nate's Birthday Café</p>
+                  <p class="cafe-idle-copy">Open the café to welcome Chiikawa, Hachiware, and Usagi. Take their order, cook with care, then serve.</p>
+                  <div class="cafe-idle-menu" aria-hidden="true">
+                    <img src="chars/snack-pudding.svg" alt="">
+                    <img src="chars/snack-onigiri.svg" alt="">
+                    <img src="chars/snack-cake.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="cafe-cook" id="cafe-cook" hidden>
+                  <div class="cafe-step-bar">
+                    <p class="cafe-step-label" id="cafe-step-label">Step</p>
+                    <div class="cafe-step-dots" id="cafe-step-dots"></div>
+                  </div>
+                  <div class="cafe-board" id="cafe-board"></div>
+                  <div class="cafe-tools" id="cafe-tools"></div>
+                  <p class="cafe-hint" id="cafe-hint" aria-live="polite"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cafe-footer">
+              <p class="cafe-status" id="cafe-status" aria-live="polite">Ready when you are, chef.</p>
+              <div class="cafe-actions">
+                <button type="button" class="cafe-btn" id="cafe-accept" hidden>Accept order</button>
+                <button type="button" class="cafe-btn" id="cafe-restart" hidden>Restart recipe</button>
+                <button type="button" class="cafe-btn cafe-btn-primary" id="cafe-serve" hidden>Serve dish</button>
+                <button type="button" class="cafe-btn" id="cafe-next" hidden>Next customer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      

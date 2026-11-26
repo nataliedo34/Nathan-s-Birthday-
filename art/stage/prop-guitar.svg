@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 160" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="body" x1="20" y1="40" x2="70" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0c878"/><stop offset="55%" stop-color="#d4a050"/><stop offset="100%" stop-color="#a87838"/>
+    </linearGradient>
+    <linearGradient id="neck" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#c8963a"/><stop offset="1" stop-color="#8a6028"/>
+    </linearGradient>
+    <radialGradient id="sound" cx="0.45" cy="0.4" r="0.55">
+      <stop offset="0%" stop-color="#5a3e2e"/><stop offset="100%" stop-color="#2a1810"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="48" cy="152" rx="22" ry="5" fill="#2a1420" opacity=".25"/>
+  <!-- body -->
+  <ellipse cx="48" cy="108" rx="32" ry="38" fill="url(#body)" stroke="#3A2A22" stroke-width="3.2"/>
+  <ellipse cx="48" cy="118" rx="22" ry="18" fill="#e8b868" stroke="#3A2A22" stroke-width="2" opacity=".55"/>
+  <circle cx="48" cy="100" r="12" fill="url(#sound)" stroke="#3A2A22" stroke-width="2.4"/>
+  <circle cx="48" cy="100" r="5" fill="#1a1008"/>
+  <!-- bridge -->
+  <rect x="36" y="126" width="24" height="5" rx="1.5" fill="#5a3e2e" stroke="#3A2A22" stroke-width="1.6"/>
+  <!-- neck -->
+  <rect x="42" y="18" width="12" height="72" rx="3" fill="url(#neck)" stroke="#3A2A22" stroke-width="2.6"/>
+  <!-- frets -->
+  <g stroke="#3A2A22" stroke-width="1.2" opacity=".55">
+    <line x1="42" y1="32" x2="54" y2="32"/><line x1="42" y1="44" x2="54" y2="44"/>
+    <line x1="42" y1="56" x2="54" y2="56"/><line x1="42" y1="68" x2="54" y2="68"/>
+  </g>
+  <!-- headstock -->
+  <path d="M38 8h22l-2 14H40z" fill="#c8963a" stroke="#3A2A22" stroke-width="2.4" stroke-linejoin="round"/>
+  <g fill="#ffe9a8" stroke="#3A2A22" stroke-width="1.2">
+    <circle cx="44" cy="14" r="2.2"/><circle cx="54" cy="14" r="2.2"/>
+  </g>
+  <!-- strings -->
+  <g stroke="#fff6ea" stroke-width="0.9" opacity=".75">
+    <line x1="45" y1="18" x2="45" y2="128"/><line x1="48" y1="18" x2="48" y2="128"/>
+    <line x1="51" y1="18" x2="51" y2="128"/>
+  </g>
+  <circle cx="38" cy="88" r="3" fill="#fff" opacity=".35"/>
+</svg>

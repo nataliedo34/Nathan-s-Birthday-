@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9fcfe8"/><stop offset="100%" stop-color="#e8f5d0"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c49a"/><stop offset="100%" stop-color="#c49a6a"/></linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fffaf2"/><stop offset="100%" stop-color="#f0e2c8"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#8a7358" flood-opacity="0.18"/></filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#f7e8d4"/>
+  <!-- tent stripes ceiling -->
+  <g>
+    <path d="M0 0 L600 120 L1200 0 Z" fill="#f5b8c6"/>
+    <path d="M0 0 L200 40 L600 120 L400 0 Z" fill="#fffaf2" opacity="0.85"/>
+    <path d="M400 0 L600 120 L800 0 Z" fill="#ffe56b" opacity="0.7"/>
+    <path d="M800 0 L600 120 L1000 40 L1200 0 Z" fill="#a8d8f0" opacity="0.75"/>
+  </g>
+  <rect y="120" width="1200" height="300" fill="#fff6ea"/>
+  <!-- fairy lights -->
+  <path d="M80 140 Q300 180 600 150 Q900 120 1120 160" fill="none" stroke="#9a7b65" stroke-width="1.5"/>
+  <g>
+    <circle cx="160" cy="148" r="7" fill="#ffe56b" stroke="#9a7b65" stroke-width="1"/><circle cx="280" cy="162" r="7" fill="#f5b8c6" stroke="#9a7b65" stroke-width="1"/>
+    <circle cx="420" cy="155" r="7" fill="#a8d8f0" stroke="#9a7b65" stroke-width="1"/><circle cx="600" cy="150" r="7" fill="#ffe56b" stroke="#9a7b65" stroke-width="1"/>
+    <circle cx="780" cy="140" r="7" fill="#f5b8c6" stroke="#9a7b65" stroke-width="1"/><circle cx="940" cy="145" r="7" fill="#c5e6a0" stroke="#9a7b65" stroke-width="1"/>
+    <circle cx="1080" cy="158" r="7" fill="#a8d8f0" stroke="#9a7b65" stroke-width="1"/>
+  </g>
+  <!-- cushions -->
+  <ellipse cx="180" cy="520" rx="90" ry="40" fill="#f5b8c6" stroke="#9a7b65" stroke-width="2"/>
+  <ellipse cx="1020" cy="530" rx="100" ry="42" fill="#a8d8f0" stroke="#9a7b65" stroke-width="2"/>
+  <ellipse cx="220" cy="560" rx="70" ry="28" fill="#ffe56b" stroke="#9a7b65" stroke-width="1.5"/>
+  <!-- floor rug -->
+  <ellipse cx="600" cy="620" rx="320" ry="90" fill="#e8d4b0" stroke="#9a7b65" stroke-width="2"/>
+  <ellipse cx="600" cy="620" rx="260" ry="70" fill="#f0e0c4" stroke="#c4a882" stroke-width="1"/>
+  <!-- wooden table -->
+  <g transform="translate(420,480)" filter="url(#soft)">
+    <ellipse cx="180" cy="40" rx="180" ry="36" fill="url(#wood)" stroke="#9a7b65" stroke-width="2"/>
+    <rect x="40" y="40" width="18" height="90" fill="#b8895c" stroke="#9a7b65" stroke-width="1.3"/>
+    <rect x="300" y="40" width="18" height="90" fill="#b8895c" stroke="#9a7b65" stroke-width="1.3"/>
+  </g>
+  <!-- bunting -->
+  <path d="M100 200 L1100 200" stroke="#9a7b65" stroke-width="1.5"/>
+  <g>
+    <path d="M140 200 L160 240 L180 200 Z" fill="#f5b8c6"/><path d="M220 200 L240 240 L260 200 Z" fill="#ffe56b"/>
+    <path d="M300 200 L320 240 L340 200 Z" fill="#a8d8f0"/><path d="M380 200 L400 240 L420 200 Z" fill="#c5e6a0"/>
+    <path d="M780 200 L800 240 L820 200 Z" fill="#f5b8c6"/><path d="M860 200 L880 240 L900 200 Z" fill="#ffe56b"/>
+    <path d="M940 200 L960 240 L980 200 Z" fill="#a8d8f0"/>
+  </g>
+
+</svg>

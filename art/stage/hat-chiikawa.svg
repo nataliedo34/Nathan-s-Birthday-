@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 90" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="cone" x1="40" y1="8" x2="40" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffb0c8"/><stop offset="1" stop-color="#e84870"/>
+    </linearGradient>
+    <linearGradient id="pom" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff"/><stop offset="55%" stop-color="#ffe08a"/><stop offset="100%" stop-color="#e8b040"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 10 L72 80 L8 80 Z" fill="url(#cone)" stroke="#3A2A22" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#fff8f0" opacity=".92">
+    <path d="M40 18 L46 34 L34 34 Z"/>
+    <path d="M22 52 L34 52 L31 62 L19 62 Z"/>
+    <path d="M58 52 L46 52 L49 62 L61 62 Z"/>
+    <path d="M14 70 L28 70 L26 78 L12 78 Z"/>
+    <path d="M66 70 L52 70 L54 78 L68 78 Z"/>
+  </g>
+  <path d="M8 80h64" stroke="#3A2A22" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="40" cy="12" r="10" fill="url(#pom)" stroke="#3A2A22" stroke-width="2.6"/>
+  <circle cx="36" cy="9" r="3" fill="#fff" opacity=".65"/>
+</svg>

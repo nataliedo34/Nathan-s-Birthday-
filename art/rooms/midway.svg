@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9fcfe8"/><stop offset="100%" stop-color="#e8f5d0"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c49a"/><stop offset="100%" stop-color="#c49a6a"/></linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fffaf2"/><stop offset="100%" stop-color="#f0e2c8"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#8a7358" flood-opacity="0.18"/></filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#1e2740"/>
+  <rect width="1200" height="280" fill="#2a3550"/>
+  <!-- ceiling neon strip -->
+  <rect y="40" width="1200" height="12" fill="#f5b8c6" opacity="0.8"/>
+  <rect y="60" width="1200" height="8" fill="#a8d8f0" opacity="0.6"/>
+  <!-- carpet -->
+  <rect y="500" width="1200" height="300" fill="#3d2a45"/>
+  <g fill="#5a3d60" opacity="0.5">
+    <circle cx="150" cy="580" r="40"/><circle cx="400" cy="640" r="50"/><circle cx="700" cy="600" r="45"/><circle cx="1000" cy="660" r="55"/>
+  </g>
+  <!-- machine silhouettes left/right -->
+  <g transform="translate(40,200)">
+    <rect width="160" height="300" rx="12" fill="#4a6a8a" stroke="#9a7b65" stroke-width="2"/>
+    <rect x="16" y="24" width="128" height="100" rx="8" fill="#7ec8e8"/>
+    <circle cx="80" cy="180" r="28" fill="#f5b8c6" stroke="#9a7b65" stroke-width="2"/>
+  </g>
+  <g transform="translate(1000,200)">
+    <rect width="160" height="300" rx="12" fill="#6a4a7a" stroke="#9a7b65" stroke-width="2"/>
+    <rect x="16" y="24" width="128" height="100" rx="8" fill="#e8b0d0"/>
+    <rect x="40" y="160" width="80" height="50" rx="8" fill="#ffe56b" stroke="#9a7b65" stroke-width="1.5"/>
+  </g>
+  <!-- center glow floor -->
+  <ellipse cx="600" cy="520" rx="280" ry="40" fill="#ffe9a0" opacity="0.12"/>
+  <!-- hanging sign -->
+  <g transform="translate(420,90)">
+    <rect width="360" height="50" rx="12" fill="#fff8ef" stroke="#9a7b65" stroke-width="2.5"/>
+    <text x="180" y="34" text-anchor="middle" font-family="Zen Maru Gothic,Verdana" font-size="22" font-weight="700" fill="#4a3b34">Usagi Arcade</text>
+  </g>
+
+</svg>

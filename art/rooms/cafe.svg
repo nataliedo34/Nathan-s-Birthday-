@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9fcfe8"/><stop offset="100%" stop-color="#e8f5d0"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c49a"/><stop offset="100%" stop-color="#c49a6a"/></linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fffaf2"/><stop offset="100%" stop-color="#f0e2c8"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#8a7358" flood-opacity="0.18"/></filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#f5e6d0"/>
+  <rect width="1200" height="300" fill="#ffe8c8"/>
+  <!-- menu board -->
+  <g transform="translate(80,60)">
+    <rect width="220" height="200" rx="10" fill="#4a3b34" stroke="#9a7b65" stroke-width="3"/>
+    <rect x="12" y="12" width="196" height="176" rx="6" fill="#5c4a3e"/>
+    <text x="110" y="48" text-anchor="middle" fill="#ffe56b" font-size="18" font-family="Zen Maru Gothic,Verdana" font-weight="700">MENU</text>
+    <text x="110" y="85" text-anchor="middle" fill="#fffaf2" font-size="14" font-family="Zen Maru Gothic,Verdana">プリン</text>
+    <text x="110" y="115" text-anchor="middle" fill="#fffaf2" font-size="14" font-family="Zen Maru Gothic,Verdana">おにぎり</text>
+    <text x="110" y="145" text-anchor="middle" fill="#fffaf2" font-size="14" font-family="Zen Maru Gothic,Verdana">ケーキ</text>
+  </g>
+  <!-- windows -->
+  <g transform="translate(420,50)">
+    <rect width="160" height="180" rx="8" fill="#c8e8f8" stroke="#9a7b65" stroke-width="2.5"/>
+    <rect x="200" width="160" height="180" rx="8" fill="#c8e8f8" stroke="#9a7b65" stroke-width="2.5"/>
+    <rect x="400" width="160" height="180" rx="8" fill="#c8e8f8" stroke="#9a7b65" stroke-width="2.5"/>
+  </g>
+  <!-- counter -->
+  <g filter="url(#soft)">
+    <rect x="60" y="380" width="1080" height="120" rx="8" fill="url(#wood)" stroke="#9a7b65" stroke-width="2.5"/>
+    <rect x="60" y="360" width="1080" height="28" fill="#e8c49a" stroke="#9a7b65" stroke-width="2"/>
+    <!-- display case -->
+    <rect x="400" y="280" width="400" height="90" rx="8" fill="#e8f4fc" stroke="#9a7b65" stroke-width="2"/>
+    <rect x="420" y="300" width="70" height="50" rx="6" fill="#f5b8c6" stroke="#9a7b65" stroke-width="1"/>
+    <rect x="510" y="295" width="70" height="55" rx="6" fill="#ffe56b" stroke="#9a7b65" stroke-width="1"/>
+    <rect x="600" y="300" width="70" height="50" rx="6" fill="#a8d8f0" stroke="#9a7b65" stroke-width="1"/>
+    <rect x="690" y="298" width="70" height="52" rx="6" fill="#c5e6a0" stroke="#9a7b65" stroke-width="1"/>
+  </g>
+  <!-- floor -->
+  <rect y="500" width="1200" height="300" fill="#e8d4b8"/>
+  <g stroke="#d4c0a0" stroke-width="1" opacity="0.5">
+    <path d="M0 560 H1200 M0 620 H1200 M0 680 H1200 M0 740 H1200"/>
+  </g>
+  <!-- tables -->
+  <ellipse cx="220" cy="640" rx="70" ry="28" fill="#c49a6a" stroke="#9a7b65" stroke-width="1.5"/>
+  <ellipse cx="980" cy="650" rx="70" ry="28" fill="#c49a6a" stroke="#9a7b65" stroke-width="1.5"/>
+  <rect x="200" y="640" width="12" height="50" fill="#b8895c"/><rect x="960" y="650" width="12" height="50" fill="#b8895c"/>
+
+</svg>

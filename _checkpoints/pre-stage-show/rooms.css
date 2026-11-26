@@ -1,0 +1,773 @@
+/* —— Illustrated attraction environments —— */
+
+.attraction-room {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  overflow-y: visible;
+  min-height: 100dvh;
+  background: #e8f0d8;
+}
+
+/* Restore sky/ground layers (styles.css + per-room art below) */
+.attraction-room > .room-sky,
+.attraction-room > .room-ground {
+  display: block;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.attraction-room > .room-sky {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  background-color: #dff0f8;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  transition: filter 0.55s ease, opacity 0.55s ease;
+}
+
+.attraction-room > .room-ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48%;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(232, 240, 216, 0.15) 28%, rgba(74, 59, 52, 0.08) 100%);
+  transition: background 0.55s ease, opacity 0.55s ease;
+}
+
+/* Unique illustrated day scenes */
+/* Post Office: clean pastel atmosphere (no geometric furniture/signage layer) */
+.room-post > .room-sky {
+  background-image: none;
+  background-color: #f4e6d8;
+  background:
+    radial-gradient(ellipse 70% 45% at 82% 12%, rgba(255, 236, 214, 0.95) 0%, transparent 62%),
+    radial-gradient(ellipse 50% 40% at 12% 22%, rgba(255, 214, 224, 0.28) 0%, transparent 58%),
+    radial-gradient(ellipse 60% 35% at 50% 0%, rgba(255, 250, 244, 0.7) 0%, transparent 55%),
+    linear-gradient(180deg, #f7ebe0 0%, #f1dbc8 52%, #e9d0b6 100%);
+}
+
+.room-post > .room-ground {
+  height: 38%;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(232, 208, 184, 0.2) 30%, rgba(196, 154, 106, 0.16) 100%);
+}
+
+.room-post::before {
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 48%, rgba(74, 59, 52, 0.07) 100%),
+    linear-gradient(180deg, rgba(255, 252, 246, 0.2) 0%, transparent 16%, transparent 72%, rgba(74, 59, 52, 0.06) 100%);
+  opacity: 1;
+}
+
+.room-jar > .room-sky {
+  background-image: url("art/rooms/jar.svg");
+  background-color: #e4f2d8;
+}
+
+.room-carousel > .room-sky {
+  background-image: url("art/rooms/album.svg");
+  background-color: #d7f0fb;
+}
+
+.room-cafe > .room-sky {
+  background-image: url("art/rooms/cafe.svg");
+  background-color: #fff0d8;
+}
+
+.room-stage > .room-sky {
+  background-image: url("art/rooms/stage.svg");
+  background-color: #f7d0dc;
+}
+
+.room-midway > .room-sky {
+  background-image: url("art/rooms/midway.svg");
+  background-color: #e0e8fb;
+}
+
+.room-garden > .room-sky {
+  background-image: url("art/rooms/garden.svg");
+  background-color: #e8f6d0;
+}
+
+/* Soft day vignette so content stays readable */
+.attraction-room::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 42%, transparent 42%, rgba(74, 59, 52, 0.1) 100%),
+    linear-gradient(180deg, rgba(255, 252, 246, 0.12) 0%, transparent 18%, transparent 70%, rgba(74, 59, 52, 0.08) 100%);
+  opacity: 0.85;
+  transition: opacity 0.55s ease, background 0.55s ease;
+}
+
+.attraction-room .attraction-inner,
+.attraction-room .ending-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+}
+
+.attraction-room .wrap.attraction-inner {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+.room-carousel .attraction-inner > h2 {
+  margin-bottom: 0.35rem;
+}
+
+.room-carousel .attraction-inner > .lede {
+  margin-bottom: 0.75rem;
+}
+
+.room-carousel .book {
+  padding-bottom: 12px;
+}
+
+.attraction-room .attraction-eyebrow {
+  display: inline-block;
+  margin: 0 auto 10px;
+  padding: 6px 14px;
+  background: rgba(255, 252, 246, 0.88);
+  border: 1.5px solid rgba(154, 123, 101, 0.45);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 0 rgba(138, 115, 88, 0.08);
+}
+
+.attraction-room .attraction-inner > h2,
+.attraction-room .attraction-inner > .lede {
+  text-shadow: 0 1px 0 rgba(255, 252, 246, 0.55);
+}
+
+.attraction-room .attraction-inner > h2 {
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+}
+
+.attraction-room .attraction-inner > .lede {
+  font-size: 0.95rem;
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Day mode: Midway + Stage art stays dark — keep titles cream, not ink */
+body:not(.is-night) .room-midway .attraction-inner > h2,
+body:not(.is-night) .room-midway .attraction-inner > .lede,
+body:not(.is-night) .room-stage .attraction-inner > h2,
+body:not(.is-night) .room-stage .attraction-inner > .lede {
+  color: #fff8ec;
+  text-shadow:
+    0 2px 14px rgba(8, 12, 28, 0.72),
+    0 1px 2px rgba(8, 12, 28, 0.45);
+}
+
+body:not(.is-night) .room-midway .attraction-eyebrow,
+body:not(.is-night) .room-stage .attraction-eyebrow {
+  color: #4a3b34;
+  background: rgba(255, 252, 246, 0.96);
+}
+
+/* Soft paper panels embedded in scenes */
+.attraction-room .letter,
+.attraction-room .mom-note,
+.attraction-room .reason-read,
+.attraction-room .panel,
+.attraction-room .snack,
+.attraction-room .flipbook,
+.attraction-room .jar {
+  backdrop-filter: blur(2px);
+}
+
+.attraction-room .panel {
+  background: rgba(255, 252, 246, 0.92);
+  border: 1.6px solid #9a7b65;
+  box-shadow: 0 10px 0 rgba(138, 115, 88, 0.1);
+}
+
+/* Enter / leave transition */
+.attraction-room {
+  opacity: 0;
+  transform: translateY(10px) scale(0.985);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.attraction-room.is-active {
+  opacity: 1;
+  transform: none;
+}
+
+html.rooms-on .attraction-room[hidden] {
+  display: block !important;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+html.rooms-on .attraction-room.is-active {
+  visibility: visible;
+  pointer-events: auto;
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 58px;
+  padding-bottom: 48px;
+  box-sizing: border-box;
+}
+
+html.rooms-on .room-exit.is-active {
+  min-height: 100dvh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* —— Night: page-specific lighting (not a flat wash) —— */
+body.is-night .attraction-room {
+  background: #121826;
+}
+
+body.is-night .attraction-room > .room-sky {
+  /* Keep scenes readable: dusk into night without crushing detail */
+  filter: brightness(0.62) saturate(0.86) contrast(1.08) hue-rotate(-8deg);
+}
+
+body.is-night .attraction-room > .room-ground {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 200, 120, 0.22), transparent 42%),
+    linear-gradient(180deg, transparent 0%, rgba(18, 24, 38, 0.35) 35%, rgba(12, 18, 30, 0.55) 100%);
+}
+
+body.is-night .attraction-room::before {
+  opacity: 1;
+  background:
+    radial-gradient(ellipse at 78% 10%, rgba(255, 230, 170, 0.2), transparent 22%),
+    radial-gradient(ellipse at 18% 18%, rgba(140, 170, 255, 0.1), transparent 26%),
+    radial-gradient(ellipse at 50% 100%, rgba(255, 170, 90, 0.08), transparent 40%),
+    linear-gradient(180deg, rgba(10, 14, 28, 0.18) 0%, transparent 20%, transparent 68%, rgba(10, 14, 28, 0.28) 100%);
+}
+
+/* Warm lamp pools per attraction */
+body.is-night .room-post > .room-sky {
+  filter: none;
+  background-image: none;
+  background-color: #1a1624;
+  background:
+    radial-gradient(ellipse 55% 40% at 78% 10%, rgba(255, 210, 140, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 35% at 18% 18%, rgba(140, 160, 220, 0.12) 0%, transparent 55%),
+    linear-gradient(180deg, #1e1a2a 0%, #181420 55%, #141018 100%);
+}
+
+body.is-night .room-post > .room-ground {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 200, 120, 0.2), transparent 45%),
+    linear-gradient(180deg, transparent 0%, rgba(28, 18, 30, 0.35) 40%, rgba(16, 14, 24, 0.55) 100%);
+}
+
+body.is-night .room-post::before {
+  background:
+    radial-gradient(ellipse at 70% 8%, rgba(255, 220, 150, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(10, 14, 28, 0.2) 0%, transparent 22%, transparent 70%, rgba(10, 14, 28, 0.3) 100%);
+}
+
+/* Interior night: no outdoor star grid over the post desk */
+body.is-night .room-post > .room-sky::before,
+body.is-night .room-post > .room-sky::after,
+body.is-night .room-post::after {
+  opacity: 0;
+  animation: none;
+  background: none;
+}
+
+body.is-night .room-jar > .room-ground {
+  background:
+    radial-gradient(circle at 22% 12%, rgba(255, 230, 160, 0.35), transparent 10%),
+    radial-gradient(circle at 50% 10%, rgba(255, 190, 210, 0.28), transparent 8%),
+    radial-gradient(circle at 78% 12%, rgba(170, 210, 255, 0.28), transparent 10%),
+    linear-gradient(180deg, transparent 0%, rgba(16, 22, 36, 0.4) 100%);
+}
+
+body.is-night .room-carousel > .room-ground {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(255, 235, 170, 0.4), transparent 18%),
+    radial-gradient(circle at 50% 70%, rgba(255, 200, 140, 0.14), transparent 28%),
+    linear-gradient(180deg, transparent 0%, rgba(18, 16, 30, 0.45) 100%);
+}
+
+body.is-night .room-cafe > .room-ground {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 200, 120, 0.38), transparent 16%),
+    radial-gradient(circle at 70% 24%, rgba(255, 230, 170, 0.32), transparent 14%),
+    linear-gradient(180deg, transparent 0%, rgba(28, 22, 30, 0.5) 100%);
+}
+
+body.is-night .room-stage > .room-sky {
+  filter: brightness(0.72) saturate(1.05) contrast(1.06);
+}
+
+body.is-night .room-stage > .room-ground {
+  background:
+    radial-gradient(circle at 20% 8%, rgba(255, 220, 140, 0.42), transparent 12%),
+    radial-gradient(circle at 50% 6%, rgba(255, 240, 180, 0.5), transparent 14%),
+    radial-gradient(circle at 80% 8%, rgba(255, 200, 160, 0.38), transparent 12%),
+    linear-gradient(180deg, transparent 0%, rgba(24, 14, 28, 0.5) 100%);
+}
+
+body.is-night .room-midway > .room-sky {
+  filter: brightness(0.78) saturate(1.12) contrast(1.05);
+}
+
+body.is-night .room-midway > .room-ground {
+  background:
+    radial-gradient(circle at 50% 6%, rgba(255, 150, 200, 0.32), transparent 16%),
+    radial-gradient(circle at 14% 36%, rgba(120, 200, 255, 0.28), transparent 12%),
+    radial-gradient(circle at 86% 36%, rgba(255, 180, 120, 0.28), transparent 12%),
+    linear-gradient(180deg, transparent 0%, rgba(14, 18, 32, 0.5) 100%);
+}
+
+body.is-night .room-garden > .room-ground {
+  background:
+    radial-gradient(circle at 78% 10%, rgba(255, 245, 200, 0.32), transparent 16%),
+    radial-gradient(circle at 22% 60%, rgba(160, 230, 180, 0.12), transparent 22%),
+    linear-gradient(180deg, transparent 0%, rgba(14, 24, 22, 0.48) 100%);
+}
+
+/* Paper stays readable with soft lamp glow */
+body.is-night .attraction-room .letter,
+body.is-night .attraction-room .mom-note,
+body.is-night .attraction-room .reason-read,
+body.is-night .attraction-room .panel,
+body.is-night .attraction-room .snack,
+body.is-night .attraction-room .flipbook,
+body.is-night .attraction-room .jar {
+  background: rgba(255, 250, 242, 0.96);
+  color: #2f261f;
+  box-shadow:
+    4px 4px 0 rgba(20, 16, 28, 0.16),
+    0 0 28px rgba(255, 190, 100, 0.28);
+}
+
+body.is-night .attraction-room .attraction-eyebrow {
+  background: rgba(255, 250, 242, 0.94);
+  color: #4a3b34;
+  border-color: rgba(58, 42, 34, 0.45);
+  box-shadow: 0 0 16px rgba(255, 200, 120, 0.25);
+}
+
+body.is-night .attraction-room .attraction-inner > h2,
+body.is-night .attraction-room .attraction-inner > .lede {
+  color: #fff8ec;
+  text-shadow: 0 2px 14px rgba(10, 14, 28, 0.65);
+}
+
+/* —— Post: envelope —— */
+.room-post .attraction-inner {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  padding-top: 12px;
+  padding-bottom: 56px;
+}
+
+/* Keep Return clear of fixed site nav; décor stays on sky/ground only */
+.room-post > .room-back {
+  position: sticky;
+  top: 62px;
+  z-index: 9;
+  margin: 4px 0 8px 16px;
+  align-self: flex-start;
+  max-width: max-content;
+  pointer-events: auto;
+}
+
+.post-desk {
+  width: min(720px, 100%);
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+.envelope {
+  position: relative;
+  width: min(420px, 92vw);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  filter: drop-shadow(0 12px 18px rgba(74, 59, 52, 0.16));
+}
+
+.envelope-back {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.45;
+  background: linear-gradient(160deg, #fff8ef, #f0ddc4);
+  border: 2px solid #9a7b65;
+  border-radius: 12px;
+}
+
+.envelope-flap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 48%;
+  background: linear-gradient(180deg, #f5e6d4, #e8d2b4);
+  border: 2px solid #9a7b65;
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 2;
+}
+
+.envelope-seal {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 42px;
+  height: 42px;
+  margin: -21px 0 0 -21px;
+  border-radius: 50%;
+  background: #f5b8c6;
+  border: 2px solid #9a7b65;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: #4a3b34;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.envelope-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 14%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 252, 246, 0.9);
+  border: 1.2px solid #9a7b65;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6b564e;
+}
+
+.envelope.is-open .envelope-flap {
+  transform: rotateX(180deg) translateY(-6%);
+}
+
+.envelope.is-open .envelope-seal,
+.envelope.is-open .envelope-hint {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.letter-stack {
+  width: min(640px, 100%);
+  display: grid;
+  gap: 14px;
+  opacity: 0;
+  transform: translateY(16px);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.45s ease, transform 0.45s ease, max-height 0.55s ease;
+}
+
+.envelope.is-open ~ .letter-stack,
+.post-desk.is-open .letter-stack {
+  opacity: 1;
+  transform: none;
+  max-height: 2400px;
+}
+
+.post-cast {
+  position: absolute;
+  right: max(4%, 12px);
+  bottom: 8%;
+  z-index: 3;
+  width: clamp(72px, 12vw, 110px);
+  filter: drop-shadow(0 8px 0 rgba(138, 115, 88, 0.15));
+  pointer-events: none;
+}
+
+/* —— Jar tent —— */
+.room-jar .jar-stage {
+  align-items: end;
+}
+
+.room-jar .reason-read {
+  min-height: 160px;
+  background: rgba(255, 252, 246, 0.94);
+  border: 1.6px solid #9a7b65;
+  border-radius: 18px;
+  padding: 18px 16px;
+  box-shadow: 0 10px 0 rgba(138, 115, 88, 0.1);
+}
+
+.jar-note.is-open {
+  animation: note-pluck 0.55s ease forwards;
+}
+
+@keyframes note-pluck {
+  0% { transform: translateY(0) rotate(var(--rot, 0deg)) scale(1); }
+  40% { transform: translateY(-28px) rotate(calc(var(--rot, 0deg) + 8deg)) scale(1.08); }
+  100% { transform: translateY(-6px) rotate(var(--rot, 0deg)) scale(0.92); opacity: 0.55; }
+}
+
+.reason-read.is-unfold .reason-text {
+  animation: note-unfold 0.55s ease;
+}
+
+@keyframes note-unfold {
+  from { transform: scaleY(0.2) rotate(-2deg); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+/* —— Memory desk —— */
+.room-carousel .book-stage {
+  padding: 18px;
+  background: rgba(255, 252, 246, 0.55);
+  border: 1.5px solid rgba(154, 123, 101, 0.35);
+  border-radius: 22px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+/* —— Stage —— */
+.room-stage .cards {
+  gap: 14px;
+}
+
+.room-stage .wish {
+  position: relative;
+  overflow: hidden;
+}
+
+.room-stage .wish::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+  background:
+    linear-gradient(90deg, #a84868, #f5b8c6, #ffe56b, #a84868);
+  opacity: 0.85;
+}
+
+.room-stage .wish-art {
+  background: radial-gradient(circle at 50% 30%, rgba(255, 240, 180, 0.55), transparent 55%),
+    #2a2438;
+  border-radius: 16px;
+}
+
+body.is-night .room-stage .wish-art {
+  background: radial-gradient(circle at 50% 20%, rgba(255, 230, 150, 0.45), transparent 50%), #1a1528;
+}
+
+/* —— Café —— */
+.room-cafe .snacks {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 252, 246, 0.55);
+  border: 1.5px solid rgba(154, 123, 101, 0.35);
+}
+
+.room-cafe .snack {
+  background: rgba(255, 252, 246, 0.95);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.room-cafe .snack:hover,
+.room-cafe .snack:focus-within {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 14px 0 rgba(138, 115, 88, 0.12);
+}
+
+.cafe-cast {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  pointer-events: none;
+}
+
+.cafe-cast img {
+  width: clamp(48px, 8vw, 72px);
+  height: auto;
+  filter: drop-shadow(0 6px 0 rgba(138, 115, 88, 0.14));
+}
+
+/* Café game title sits inside the cook shell; keep outer lede quiet */
+.room-cafe .cafe-wrap > .attraction-eyebrow {
+  margin-bottom: 8px;
+}
+
+/* —— Midway —— */
+.room-midway .panel.game {
+  background: rgba(255, 252, 246, 0.94);
+  border-radius: 20px;
+}
+
+.room-midway .machine,
+.room-midway .claw-machine {
+  box-shadow: 0 12px 0 rgba(40, 30, 50, 0.18), inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+/* —— Garden —— */
+.room-garden .garden-stage {
+  padding: 20px 16px 28px;
+  border-radius: 24px;
+  background: rgba(255, 252, 246, 0.5);
+  border: 1.5px solid rgba(154, 123, 101, 0.3);
+}
+
+.garden-friends {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 8px;
+  pointer-events: none;
+}
+
+.garden-friends img {
+  width: clamp(52px, 9vw, 78px);
+  height: auto;
+  filter: drop-shadow(0 6px 0 rgba(138, 115, 88, 0.14));
+}
+
+/* —— Exit enhancements —— */
+.room-exit .ending-veil {
+  background:
+    linear-gradient(180deg, rgba(12, 16, 32, 0.28) 0%, rgba(12, 16, 32, 0.12) 42%, rgba(12, 16, 32, 0.48) 100%);
+}
+
+/* Day mode: keep a readable scrim so cream text doesn’t wash out on the photo */
+body:not(.is-night) .room-exit .ending-veil {
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(12, 16, 32, 0.55) 0%, rgba(12, 16, 32, 0.28) 42%, rgba(12, 16, 32, 0.45) 100%),
+    linear-gradient(180deg, rgba(12, 16, 32, 0.42) 0%, rgba(12, 16, 32, 0.2) 38%, rgba(12, 16, 32, 0.55) 100%);
+}
+
+body:not(.is-night) .room-exit .ending-inner {
+  color: #fff8ec;
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 22px 22px 18px;
+  border-radius: 24px;
+  background: rgba(16, 20, 34, 0.52);
+  border: 2px solid rgba(255, 248, 236, 0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 12px 40px rgba(8, 12, 28, 0.28);
+}
+
+body:not(.is-night) .room-exit .ending-lead,
+body:not(.is-night) .room-exit .ending-sign,
+body:not(.is-night) .room-exit .ending-night-msg {
+  color: #fffaf2;
+  text-shadow:
+    0 2px 16px rgba(8, 12, 28, 0.85),
+    0 0 3px rgba(8, 12, 28, 0.7);
+}
+
+body:not(.is-night) .room-exit .fine {
+  color: #e8dcc8;
+}
+
+/* Night mode: same readable scrim + frosted message panel as day (lanterns wash white text otherwise) */
+body.is-night .room-exit .ending-veil {
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(8, 12, 28, 0.58) 0%, rgba(8, 12, 28, 0.3) 42%, rgba(8, 12, 28, 0.5) 100%),
+    radial-gradient(ellipse at 50% 18%, rgba(255, 210, 140, 0.12), transparent 28%),
+    radial-gradient(ellipse at 20% 70%, rgba(255, 160, 100, 0.08), transparent 30%),
+    radial-gradient(ellipse at 80% 65%, rgba(255, 170, 130, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(8, 12, 28, 0.48) 0%, rgba(8, 12, 28, 0.22) 40%, rgba(8, 12, 28, 0.62) 100%);
+}
+
+body.is-night .room-exit .ending-inner {
+  color: #fff8ec;
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 22px 22px 18px;
+  border-radius: 24px;
+  background: rgba(12, 16, 30, 0.62);
+  border: 2px solid rgba(255, 232, 196, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 12px 40px rgba(4, 8, 20, 0.45),
+    0 0 0 1px rgba(255, 210, 140, 0.08);
+}
+
+body.is-night .room-exit .ending-lead,
+body.is-night .room-exit .ending-sign,
+body.is-night .room-exit .ending-night-msg {
+  color: #fffaf2;
+  text-shadow:
+    0 2px 18px rgba(4, 8, 20, 0.9),
+    0 0 4px rgba(4, 8, 20, 0.75);
+}
+
+body.is-night .room-exit .ending-night-msg {
+  color: #ffe9c2;
+}
+
+body.is-night .room-exit .fine {
+  color: #e8dcc8;
+}
+
+body.is-night .room-exit .ending-cast {
+  filter: drop-shadow(0 0 18px rgba(255, 210, 140, 0.45));
+}
+
+body.is-night .room-exit .ending-string .paper-lantern {
+  filter: drop-shadow(0 0 10px rgba(255, 190, 100, 0.55));
+}
+
+/* Room back button — stay a compact pill (Exit flex layout was stretching it) */
+.room-back {
+  position: sticky;
+  top: 62px;
+  z-index: 9;
+  display: inline-flex !important;
+  margin: 8px 0 0 16px;
+  align-self: flex-start !important;
+  justify-self: start;
+  width: fit-content !important;
+  max-width: fit-content !important;
+  flex: 0 0 auto !important;
+}
+
+.room-exit > .room-back {
+  position: absolute;
+  top: 70px;
+  left: 16px;
+  margin: 0;
+  z-index: 10;
+}
+
+@media (max-width: 720px) {
+  .post-cast { display: none; }
+  .room-post .attraction-inner { padding-top: 16px; }
+  .cafe-cast img { width: 44px; }
+}

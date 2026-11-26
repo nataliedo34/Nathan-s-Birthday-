@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9fcfe8"/><stop offset="100%" stop-color="#e8f5d0"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c49a"/><stop offset="100%" stop-color="#c49a6a"/></linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fffaf2"/><stop offset="100%" stop-color="#f0e2c8"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#8a7358" flood-opacity="0.18"/></filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <!-- hills -->
+  <path d="M0 320 C200 280 400 340 600 300 C800 260 1000 330 1200 290 L1200 800 L0 800 Z" fill="#c6e39a"/>
+  <path d="M0 420 C250 380 500 460 750 410 C950 370 1100 440 1200 420 L1200 800 L0 800 Z" fill="#a8d078"/>
+  <!-- path -->
+  <path d="M500 800 C520 600 560 480 600 400 C640 480 680 600 700 800 Z" fill="#e8d4a8" opacity="0.85"/>
+  <!-- picnic blanket -->
+  <g transform="translate(380,520)">
+    <path d="M0 40 L220 0 L440 50 L200 120 Z" fill="#f5b8c6" stroke="#9a7b65" stroke-width="2"/>
+    <path d="M40 50 L240 20 L400 60 L180 100 Z" fill="#fffaf2" opacity="0.35"/>
+  </g>
+  <!-- flowers -->
+  <g>
+    <g transform="translate(120,480)"><circle r="10" fill="#f5b8c6"/><circle cx="8" cy="-4" r="8" fill="#ffe56b"/><circle cx="-6" cy="6" r="7" fill="#a8d8f0"/><rect x="-2" y="10" width="4" height="24" fill="#6fa84a"/></g>
+    <g transform="translate(220,560)"><circle r="10" fill="#ffe56b"/><circle cx="8" r="8" fill="#f5b8c6"/><rect x="-2" y="10" width="4" height="20" fill="#6fa84a"/></g>
+    <g transform="translate(980,500)"><circle r="11" fill="#a8d8f0"/><circle cx="-8" cy="4" r="8" fill="#c5e6a0"/><rect x="-2" y="12" width="4" height="22" fill="#6fa84a"/></g>
+    <g transform="translate(1080,580)"><circle r="9" fill="#f5b8c6"/><circle cx="7" cy="-5" r="8" fill="#ffe56b"/><rect x="-2" y="10" width="4" height="18" fill="#6fa84a"/></g>
+  </g>
+  <!-- trees -->
+  <g transform="translate(80,300)">
+    <rect x="18" y="80" width="14" height="70" fill="#8a6240"/><ellipse cx="25" cy="60" rx="45" ry="50" fill="#7eb86a" stroke="#9a7b65" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(1050,280)">
+    <rect x="18" y="80" width="14" height="80" fill="#8a6240"/><ellipse cx="25" cy="55" rx="50" ry="55" fill="#6fa84a" stroke="#9a7b65" stroke-width="1.5"/>
+  </g>
+  <!-- butterflies -->
+  <g fill="#fff" stroke="#f5b8c6" stroke-width="1">
+    <ellipse cx="300" cy="240" rx="8" ry="5" transform="rotate(-20 300 240)"/>
+    <ellipse cx="700" cy="200" rx="7" ry="4" transform="rotate(15 700 200)"/>
+    <ellipse cx="900" cy="260" rx="8" ry="5" transform="rotate(-10 900 260)"/>
+  </g>
+
+</svg>

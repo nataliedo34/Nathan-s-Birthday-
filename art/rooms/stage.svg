@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9fcfe8"/><stop offset="100%" stop-color="#e8f5d0"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c49a"/><stop offset="100%" stop-color="#c49a6a"/></linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fffaf2"/><stop offset="100%" stop-color="#f0e2c8"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#8a7358" flood-opacity="0.18"/></filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#2a2438"/>
+  <!-- back curtain -->
+  <rect width="1200" height="480" fill="#6b3048"/>
+  <g fill="#8a3d5a">
+    <path d="M0 0 Q50 80 0 160 Q50 240 0 320 Q50 400 0 480 L80 480 L80 0 Z"/>
+    <path d="M1120 0 L1120 480 L1200 480 Q1150 400 1200 320 Q1150 240 1200 160 Q1150 80 1200 0 Z"/>
+  </g>
+  <!-- top valance -->
+  <path d="M0 0 H1200 V70 Q1100 110 1000 70 Q900 110 800 70 Q700 110 600 70 Q500 110 400 70 Q300 110 200 70 Q100 110 0 70 Z" fill="#a84868" stroke="#9a7b65" stroke-width="1"/>
+  <!-- stage floor -->
+  <rect y="480" width="1200" height="40" fill="url(#wood)" stroke="#9a7b65" stroke-width="2"/>
+  <path d="M0 520 L80 800 H1120 L1200 520 Z" fill="#c49a6a"/>
+  <path d="M80 520 L140 800 M200 520 L280 800 M400 520 L460 800 M600 520 L600 800 M800 520 L740 800 M1000 520 L920 800" stroke="#b8895c" stroke-width="1.5" opacity="0.5"/>
+  <!-- spotlights -->
+  <g opacity="0.35">
+    <path d="M200 70 L100 480 L300 480 Z" fill="#ffe9a0"/>
+    <path d="M600 70 L480 480 L720 480 Z" fill="#fff6d0"/>
+    <path d="M1000 70 L900 480 L1100 480 Z" fill="#ffe9a0"/>
+  </g>
+  <!-- footlights -->
+  <g>
+    <circle cx="200" cy="500" r="8" fill="#ffe56b"/><circle cx="400" cy="500" r="8" fill="#f5b8c6"/>
+    <circle cx="600" cy="500" r="8" fill="#ffe56b"/><circle cx="800" cy="500" r="8" fill="#a8d8f0"/>
+    <circle cx="1000" cy="500" r="8" fill="#ffe56b"/>
+  </g>
+
+</svg>
