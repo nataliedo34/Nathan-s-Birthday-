@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="sp" x1="50" y1="90" x2="50" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEAB8"/><stop offset="1" stop-color="#EFC67A"/>
+    </linearGradient>
+    <linearGradient id="side" x1="120" y1="90" x2="190" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4D498"/><stop offset="1" stop-color="#D9AD5C"/>
+    </linearGradient>
+    <linearGradient id="crm" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff"/><stop offset="1" stop-color="#FFE2CE"/>
+    </linearGradient>
+    <linearGradient id="jam" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FF9AAB"/><stop offset="1" stop-color="#E04C64"/>
+    </linearGradient>
+    <linearGradient id="ber" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FF6B7C"/><stop offset="1" stop-color="#C8223A"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="120" cy="218" rx="78" ry="13" fill="#C4A882" opacity=".32"/>
+  <!-- board under -->
+  <path d="M44 172 L120 200 L196 172 L196 186 Q120 220 44 186z" fill="#E6D0AE" stroke="#3A2A22" stroke-width="3.6" stroke-linejoin="round"/>
+  <!-- cake body -->
+  <path d="M44 112 L120 84 L196 112 L196 172 L120 200 L44 172z" fill="url(#sp)" stroke="#3A2A22" stroke-width="4.2" stroke-linejoin="round"/>
+  <path d="M120 84 L196 112 L196 172 L120 200z" fill="url(#side)" stroke="#3A2A22" stroke-width="4.2" stroke-linejoin="round"/>
+  <!-- cream layer -->
+  <path d="M44 134 L120 162 L196 134" stroke="#FFF8F0" stroke-width="16"/>
+  <path d="M44 134 L120 162 L196 134" stroke="#3A2A22" stroke-width="2.8"/>
+  <!-- jam -->
+  <path d="M44 152 L120 180 L196 152" stroke="url(#jam)" stroke-width="11" stroke-linecap="round" opacity=".92"/>
+  <!-- crumb dots -->
+  <g fill="#D9A85A" opacity=".4">
+    <circle cx="70" cy="122" r="2.6"/><circle cx="94" cy="132" r="2.2"/>
+    <circle cx="84" cy="146" r="2.4"/><circle cx="146" cy="122" r="2.4"/>
+    <circle cx="168" cy="136" r="2.2"/><circle cx="136" cy="148" r="2.6"/>
+  </g>
+  <!-- fruit on top face -->
+  <ellipse cx="82" cy="104" rx="13" ry="8" fill="#FF8FA0" stroke="#3A2A22" stroke-width="2.8"/>
+  <ellipse cx="118" cy="94" rx="12" ry="7.5" fill="#FF7A8A" stroke="#3A2A22" stroke-width="2.8"/>
+  <ellipse cx="152" cy="104" rx="13" ry="8" fill="#FF8FA0" stroke="#3A2A22" stroke-width="2.8"/>
+  <!-- whipped cream -->
+  <path d="M94 70c-6-24 14-38 34-26 6 4 10 12 10 22 0 0-12-7-22-4s-14 6-22 8z" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.6" stroke-linejoin="round"/>
+  <ellipse cx="104" cy="58" rx="11" ry="10" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.2"/>
+  <ellipse cx="118" cy="48" rx="11" ry="10" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.2"/>
+  <ellipse cx="132" cy="60" rx="10" ry="9" fill="url(#crm)" stroke="#3A2A22" stroke-width="3.2"/>
+  <!-- strawberry -->
+  <path d="M118 38c-10 0-18 12-18 24 0 14 12 26 18 34 6-8 18-20 18-34 0-12-8-24-18-24z" fill="url(#ber)" stroke="#3A2A22" stroke-width="3.6" stroke-linejoin="round"/>
+  <g fill="#F5A8B0" opacity=".75">
+    <ellipse cx="110" cy="56" rx="1.8" ry="2.6" transform="rotate(-20 110 56)"/>
+    <ellipse cx="126" cy="60" rx="1.8" ry="2.6" transform="rotate(16 126 60)"/>
+    <ellipse cx="118" cy="70" rx="1.6" ry="2.4"/>
+  </g>
+  <path d="M118 40c0 12-2 20-6 26" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".55"/>
+  <path d="M118 34c5-11 15-10 15 1" stroke="#4F8A3E" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M118 36c-6-7-13-4-12 2" stroke="#4F8A3E" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="108" cy="52" r="3" fill="#fff" opacity=".85"/>
+</svg>
